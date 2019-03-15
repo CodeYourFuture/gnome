@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:6-alpine
 
 # Create app directory
 RUN mkdir -p /src/web
