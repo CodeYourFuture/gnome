@@ -1,4 +1,6 @@
 FROM node:6-alpine
+RUN adduser -D humankind
+USER humankind
 
 # Create app directory
 RUN mkdir -p /src/web
