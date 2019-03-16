@@ -9,7 +9,11 @@ RUN apk --no-cache --update add --virtual build-dependencies build-base python \
   && npm config set loglevel warn \
   && npm --quiet install \
   && npm cache clean \
-  && apk del build-dependencies
+  && apk del build-dependencies \
+  && adduser -D humankind \
+  && chmod -R humankind /usr/src/api
+
+USER humankind
 
 ENV NODE_PATH src
 
