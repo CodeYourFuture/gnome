@@ -1,10 +1,10 @@
 FROM node:6-alpine
 RUN adduser -D humankind
-USER humankind
 
 # Create app directory
-RUN mkdir -p /src/web
+RUN mkdir -p /src/web && chown -R humankind /src/web
 WORKDIR /src/web
+USER humankind
 
 # Install app dependencies
 COPY package.json /src/web/
