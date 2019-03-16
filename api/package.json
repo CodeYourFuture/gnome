@@ -9,7 +9,7 @@
     "coverage": "NODE_PATH=src JASMINE_CONFIG_PATH=test/jasmine.json istanbul cover jasmine",
     "seed": "(cd ../ionic-app/ && gulp e2e.seed)",
     "start": "NODE_PATH=src node index.js",
-    "start:dev": GNOME_ENV=dev NODE_ENV=dev node index.js",
+    "start:dev": "GNOME_ENV=dev NODE_ENV=dev node index.js",
     "pm2start": "NODE_PATH=src pm2 start index.js",
     "worker": "NODE_PATH=src node worker.js"
   },
